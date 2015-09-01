@@ -7,7 +7,7 @@
 #Your code should include at least two methods.
 
 correct_number = rand(1...100)
-# puts correct_number
+ puts correct_number
 
 all_guesses = Array.new
 
@@ -16,10 +16,10 @@ all_guesses = Array.new
   guess = gets.chomp
   all_guesses << guess
 # puts all_guesses
-  if guess > correct_number
+  if guess.to_i >= correct_number
     puts "You guessed too high! Try again."
   elsif
-    guess < correct_number
+    guess.to_i <= correct_number
     puts "You guessed too low! Try again."
   else
     puts "You guessed the correct number!"
