@@ -1,16 +1,16 @@
-# DONE
 #Your program should pick a random number between 1 and 100 and ask you for a guess.
 #If your guess is less than the program's number, it should tell you that you were low and let you guess again.
 #If the guess is greater than the program's number, it should tell you that you were high and let you guess again.
 #If your guess is correct, the program should tell you that you win and then quit.
 #If you guess the same number twice, the program should ask you if you're feeling all right (or something similarly sarcastic).
 #Your code should include at least two methods.
+#After 5 incorrect guesses, the program should tell you that you lose.
 
 # TO DO
-#After 5 incorrect guesses, the program should tell you that you lose.
 
 # TO FIX
 # "Try again" shouldn't appear on the 5th try
+# Do not allow entries < 0 or > 100
 
 correct_number = rand(1...100)
  puts correct_number
@@ -23,9 +23,9 @@ end
 
 def guess_check (user_guess, comp_number)
   if user_guess > comp_number
-    puts "You guessed too high! Try again."
+    puts "You guessed too high!"
   elsif user_guess < comp_number
-    puts "You guessed too low! Try again."
+    puts "You guessed too low!"
   else
     puts "You guessed right! YOU ARE AMAZING!!!"
     return true
@@ -48,11 +48,10 @@ until count == 5
     else
       puts "Please enter a number."
     end
+    if count == 5 && guess.to_i != correct_number
+    	puts "You have guessed incorrectly 5 times. GAME OVER!"
+    end
   end
 end
-
-  #if guess != number
-  #	puts "You have guessed incorrectly 5 times. GAME OVER!"
-  #end
 
 #puts all_guesses
