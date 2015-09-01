@@ -37,9 +37,11 @@ until count == 5
   else
 		all_guesses.each do |value|
 			if value.to_i > guess.to_i && value.to_i < correct_number
-					puts "You guessed too low AGAIN! You feelin ok?"
+					puts "Uhhh...you feelin ok? You did it again..."
+          break
 			elsif value.to_i < guess.to_i && value.to_i > correct_number
-					puts "You guessed too high AGAIN! You feelin ok?"
+					puts "Uhhh...you feelin ok? You did it again..."
+          break
 			end
 		end
     all_guesses << guess
