@@ -1,18 +1,7 @@
-#Your program should pick a random number between 1 and 100 and ask you for a guess.
-#If your guess is less than the program's number, it should tell you that you were low and let you guess again.
-#If the guess is greater than the program's number, it should tell you that you were high and let you guess again.
-#If your guess is correct, the program should tell you that you win and then quit.
-#If you guess the same number twice, the program should ask you if you're feeling all right (or something similarly sarcastic).
-#Your code should include at least two methods.
-#After 5 incorrect guesses, the program should tell you that you lose.
+# Normal mode
 
-# TO DO
-
-# TO FIX
-# "Try again" shouldn't appear on the 5th try
-# Do not allow entries < 0 or > 100
-
-correct_number = rand(1...100)
+correct_number = (1..100).to_a.sample
+# rand(1..100)
  puts correct_number
 
 all_guesses = Array.new
@@ -50,12 +39,10 @@ until count == 5
       count += 1
       break if guess_check(guess, correct_number)
     else
-      puts "Please enter a number."
+      puts "That is not a number! Please enter a number."
     end
     if count == 5 && guess.to_i != correct_number
     	puts "You have guessed incorrectly 5 times. GAME OVER!"
     end
   end
 end
-
-#puts all_guesses
