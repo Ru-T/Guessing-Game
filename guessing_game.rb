@@ -10,3 +10,4 @@ puts "You have 5 chances to guess a number between 1 and 100. Enter a number:"
 guess = gets.chomp
 
 rand(1..100)
+#should generate a number between 1 and 100 
