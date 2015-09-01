@@ -33,12 +33,16 @@ def guess_check (user_guess, comp_number)
   false
 end
 
+def already_guessed? (array, user_guess)
+	array.include?(user_guess)
+end
+
 count = 0
 until count == 5
   puts "You have #{5 - count} chances to guess a number between 1 and 100. Enter a number:"
   guess = gets.chomp
-  if all_guesses.include?(guess)
-    puts "You already guessed that, you numbskull!"
+  if already_guessed?(all_guesses, guess)
+    puts "You already guessed this number, you numbskull!"
   else
     all_guesses << guess
     if is_numeric?(guess)
