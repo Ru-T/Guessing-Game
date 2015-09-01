@@ -1,7 +1,4 @@
-# Normal mode
-
-# You might say "50" and then be told "that's too low." If you then guess "25,"
-# you're just wasting a guess.
+# Hard mode
 
 correct_number = (1..100).to_a.sample  # rand(1..100)
  puts correct_number
