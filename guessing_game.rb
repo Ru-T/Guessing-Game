@@ -33,7 +33,7 @@ until count == 5
   puts "You have #{5 - count} chances to guess a number between 1 and 100. Enter a number:"
   guess = gets.chomp
   if already_guessed?(all_guesses, guess)
-    puts "You already guessed this number, you numbskull!"
+    puts "You already guessed this, you numbskull!"
   else
 		all_guesses.each do |value|
 			if value.to_i > guess.to_i && value.to_i < correct_number
